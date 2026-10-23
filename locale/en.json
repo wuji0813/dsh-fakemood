@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-fakemood",
+    "description": "Estimates 19 discrete emotions and a multi-dimensional state from completed reasoning turns, shows a vertically draggable buoy window, is off by default, separates the model's own affect from the current user need, and supports per-chat task/companion modes and injection toggles."
+  }
+}
