@@ -1,0 +1,35 @@
+{
+  "name": "dsh-fakemood",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "description": "Default-off turn-end emotional state from reasoning, with user-need stance and per-chat task/companion injection modes.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "host-analyzer.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  }
+}
